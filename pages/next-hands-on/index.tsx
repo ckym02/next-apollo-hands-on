@@ -11,6 +11,10 @@ const Index: FC = () => {
         <Link href="/next-hands-on/use-effect">
           <a>→useEffect</a>
         </Link>
+        <br />
+        <Link href="/next-hands-on/use-effect-infinite-loop">
+          <a>→useEffect無限ループ</a>
+        </Link>
       </p>
       <h3>Next.js</h3>
       <p>
