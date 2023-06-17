@@ -1,4 +1,4 @@
-import { FC, useEffect, useState } from 'react'
+import { FC, useEffect, useState, useCallback } from 'react'
 
 const UseEffect: FC = () => {
   const [value, setValue] = useState<{ key1: string | null; key2: string | null } | null>(null)
@@ -7,9 +7,9 @@ const UseEffect: FC = () => {
     window.localStorage.setItem('key2', 'value2')
   }, [])
   
-  const getLocalStorageValue = (key: string) => {
+  const getLocalStorageValue = useCallback((key: string) => {
     return window.localStorage.getItem(key)
-  }
+  }, [])
 
   useEffect(() => {
     console.log('useEffect is called')
